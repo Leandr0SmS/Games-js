@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <main>
+        <div id="btn-div">
+            <button id="start-btn">Start</button>
+        </div>
+        <div id="statistics-div">
+            <div class="statistics-box">
+                <div id="counter-text">Points: </div>
+                <div id="counter"></div>
+            </div>
+            <div class="statistics-box">
+                <div id="round-text">Rounds: </div>
+                <div id="round"></div>
+            </div>
+        </div>
+        <section class="play-zone"> 
+            <div id="ball-1" class="ball">1</div>
+            <div id="ball-2" class="ball">2</div>
+            <div id="ball-3" class="ball">3</div>
+            <div id="ball-4" class="ball">4</div>
+        </section>
+    </main>
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous">
+    </script> 
+    <script src="./main.js"></script>
+</body>
+</html>
