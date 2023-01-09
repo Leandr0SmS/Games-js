@@ -1,0 +1,21 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.game-div {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.game-img {
+    object-fit: contain;
+    width: 30rem;
+    height: 30rem;
+}
