@@ -1,7 +1,18 @@
+:root {
+    --background: #3b3b4f;
+    --div: #1b1b32;
+    --font: #f5f6f7;
+    --font-hover: #a4a5a5;
+    --background-mouseover: #5f5f6e;
+    --div-mouseover: #31313f;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
     font-family: monospace, Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--font);
 }
 
 #main-heading {
@@ -14,8 +25,27 @@ body {
     margin: 0 auto;
 }
 
+.game-div:hover {
+    border: 0.5rem solid var(--div);
+}
+
 .game-img {
     object-fit: contain;
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
+    margin: 0;
+    padding: 0;
+    background-color: black;
 }
+
+a {
+    text-decoration: none;
+}
+
+.game-text {
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--font);
+}
+
