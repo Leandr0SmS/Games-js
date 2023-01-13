@@ -4,7 +4,7 @@
     --font: #f5f6f7;
     --font-hover: #a4a5a5;
     --background-mouseover: #5f5f6e;
-    --div-mouseover: #31313f;
+    --div-mouseover: #0f0f38;
 }
 
 body {
@@ -18,15 +18,29 @@ body {
 #main-heading {
     text-align: center;
     font-size: 4rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--div);
+    border-bottom: 1px solid var(--font);
+}
+
+.games {
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 30rem;
+    border-radius: 3rem;
+    background-color: var(--div);
+    border: 1px solid var(--font);
 }
 
 .game-div {
     width: fit-content;
     margin: 0 auto;
+    border: 0.5rem solid var(--div);
 }
 
 .game-div:hover {
-    border: 0.5rem solid var(--div);
+    border: 0.5rem solid var(--font-hover);
 }
 
 .game-img {
