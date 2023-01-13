@@ -40,7 +40,8 @@ body {
 }
 
 .game-div:hover {
-    border: 0.5rem solid var(--font-hover);
+    background-color: var(--background-mouseover);
+    border-radius: 3rem 3rem;
 }
 
 .game-img {
