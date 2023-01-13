@@ -36,6 +36,7 @@ body {
 .game-div {
     width: fit-content;
     margin: 0 auto;
+    margin-top: 1rem;
     border: 0.5rem solid var(--div);
 }
 
@@ -51,6 +52,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
+    border-radius: 1rem;
 }
 
 a {
