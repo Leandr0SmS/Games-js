@@ -1,9 +1,34 @@
+:root {
+    --background: #3b3b4f;
+    --div: #1b1b32;
+    --font: #f5f6f7;
+    --font-hover: #a4a5a5;
+    --background-mouseover: #5f5f6e;
+    --div-mouseover: #0f0f38;
+}
+
 body {
     box-sizing: border-box;
     background-color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     overflow: hidden;
     margin: 0;
+}
+
+.nav-bar {
+    background-color: var(--div);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--font);
+}
+
+.nav-link {
+    font-size: 2rem;
+    color: var(--font);
+    padding: 2rem;
+}
+
+.nav-link:hover {
+    color: var(--font-hover);
 }
 
 main {
@@ -18,7 +43,7 @@ main {
 
 #btn-div {
     width: 9rem;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 #start-btn {
@@ -38,6 +63,7 @@ main {
     font-size: 2rem;
     display: flex;
     justify-content: space-around;
+    padding: 0.5rem;
 }
 
 .statistics-box {
