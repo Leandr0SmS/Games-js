@@ -11,7 +11,7 @@ $(document).ready(() => {
         setTimeout(() => {
             $(event.currentTarget)
                 .css('visibility', 'hidden')
-                .css('top', '0')
+                .css('bottom', '0')
                 .css('left', '0')
                 .css('backgroundColor', 'brown')
                 .removeClass('animate__animated animate__hinge animate__backInUp');
@@ -27,13 +27,13 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-1')
                 .css('visibility', 'visible')
-                .css('left', `calc(${Math.floor(Math.random() * 94)}%)`)
-                .css('top', `calc(${Math.floor(Math.random() * 50)}% + 17rem) `)
+                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
                 $('#ball-1')
                 .css('visibility', 'hidden')
-                .css('top', '0')
+                .css('bottom', '0')
                 .css('left', '0')
                 .css('backgroundColor', 'brown')
                 .removeClass('animate__animated animate__hinge animate__backInUp');
@@ -43,13 +43,13 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-2')
                 .css('visibility', 'visible')
-                .css('left', `calc(${Math.floor(Math.random() * 94)}%)`)
-                .css('top', `calc(${Math.floor(Math.random() * 50)}%  + 17rem)`)
+                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
                 $('#ball-2')
                 .css('visibility', 'hidden')
-                .css('top', '0')
+                .css('bottom', '0')
                 .css('left', '0')
                 .css('backgroundColor', 'brown')
                 .removeClass('animate__animated animate__hinge animate__backInUp');
@@ -59,13 +59,13 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-3')
                 .css('visibility', 'visible')
-                .css('left', `calc(${Math.floor(Math.random() * 94)}%)`)
-                .css('top', `calc(${Math.floor(Math.random() * 50)}%  + 17rem)`)
+                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
                 $('#ball-3')
                 .css('visibility', 'hidden')
-                .css('top', '0')
+                .css('bottom', '0')
                 .css('left', '0')
                 .css('backgroundColor', 'brown')
                 .removeClass('animate__animated animate__hinge animate__backInUp');
@@ -75,13 +75,13 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-4')
                 .css('visibility', 'visible')
-                .css('left', `calc(${Math.floor(Math.random() * 94)}%)`)
-                .css('top', `calc(${Math.floor(Math.random() * 50)}%  + 17rem)`)
+                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
                 $('#ball-4')
                 .css('visibility', 'hidden')
-                .css('top', '0')
+                .css('bottom', '0')
                 .css('left', '0')
                 .css('backgroundColor', 'brown')
                 .removeClass('animate__animated animate__hinge animate__backInUp');
