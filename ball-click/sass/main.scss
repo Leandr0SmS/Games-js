@@ -1,0 +1,80 @@
+@import "../../resources/sass/base";
+
+body {
+    background-color: $black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: hidden;
+    @extend %body-reset;
+}
+
+.nav-bar {
+    background-color: $div;
+    padding: 0.5rem;
+    border-bottom: 1px solid $font;
+    .nav-link {
+        font-size: 2rem;
+        color: $font;
+        padding: 2rem;
+        &:hover {
+            color: $font-hover;
+        }
+    }
+}
+
+main {
+    height: 100vh;
+    #btn-div {
+        width: 9rem;
+        margin: 2rem auto;
+        #start-btn {
+            background-color: red;
+            color: $font;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 40%;
+            border: 0.5rem solid $font;
+            font-size: 2rem;
+            cursor: pointer;
+            margin: 0.3rem;
+        }
+    }
+    #statistics-div {
+        background-color: $font;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem;
+        .statistics-box {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    .play-zone {
+        cursor: crosshair;
+        height: 73vh;
+        background-color: $black;
+        .ball {
+            height: 5rem;
+            width: 5rem;
+            background-color: $ball;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            position: absolute;
+            visibility: hidden;
+        }
+    }
+}
+
+.animate__hinge {
+    --animate-duration: 1s;
+}
+
+.animate__backInRight,
+.backInLeft,
+.backInUp,
+.backInRight {
+    --animate-duration: 1s;
+}

@@ -1,0 +1,82 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  overflow: hidden;
+}
+
+.nav-bar {
+  background-color: #1b1b32;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f5f6f7;
+}
+.nav-bar .nav-link {
+  font-size: 2rem;
+  color: #f5f6f7;
+  padding: 2rem;
+}
+.nav-bar .nav-link:hover {
+  color: #a4a5a5;
+}
+
+main {
+  height: 100vh;
+}
+main #btn-div {
+  width: 9rem;
+  margin: 2rem auto;
+}
+main #btn-div #start-btn {
+  background-color: red;
+  color: #f5f6f7;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 40%;
+  border: 0.5rem solid #f5f6f7;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0.3rem;
+}
+main #statistics-div {
+  background-color: #f5f6f7;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+main #statistics-div .statistics-box {
+  display: flex;
+  gap: 1rem;
+}
+main .play-zone {
+  cursor: crosshair;
+  height: 73vh;
+  background-color: #000;
+}
+main .play-zone .ball {
+  height: 5rem;
+  width: 5rem;
+  background-color: brown;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  position: absolute;
+  visibility: hidden;
+}
+
+.animate__hinge {
+  --animate-duration: 1s;
+}
+
+.animate__backInRight,
+.backInLeft,
+.backInUp,
+.backInRight {
+  --animate-duration: 1s;
+}/*# sourceMappingURL=main.css.map */
