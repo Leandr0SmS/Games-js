@@ -1,0 +1,32 @@
+@import "./base";
+
+body {
+    @extend %body-reset;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+    background-color: $background;
+    color: $font;
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 4rem;
+    @extend %center;
+    padding: 1rem;
+    background-color: $div;
+    border-bottom: 1px solid $font;
+}
+
+.games {
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 30rem;
+    border-radius: 3rem;
+    background-color: $div;
+    border: 1px solid $font;
+    .game-div {
+        width: fit-content;
+        @extend %center;
+        margin-top: 1rem;
+        border: 0.5rem solid $div;
+    }
+}

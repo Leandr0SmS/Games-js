@@ -1,0 +1,15 @@
+$background: #3b3b4f;
+$div: #1b1b32;
+$font: #f5f6f7;
+$font-hover: #a4a5a5;
+$background-mouseover: #5f5f6e;
+$div-mouseover: #0f0f38;
+
+%body-reset {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+%center {
+    margin: 0 auto;
+}

@@ -1,0 +1,38 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.games .game-div, #main-heading {
+  margin: 0 auto;
+}
+
+body {
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  background-color: #3b3b4f;
+  color: #f5f6f7;
+}
+
+#main-heading {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem;
+  background-color: #1b1b32;
+  border-bottom: 1px solid #f5f6f7;
+}
+
+.games {
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 30rem;
+  border-radius: 3rem;
+  background-color: #1b1b32;
+  border: 1px solid #f5f6f7;
+}
+.games .game-div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+  border: 0.5rem solid #1b1b32;
+}/*# sourceMappingURL=main.css.map */
