@@ -28,5 +28,27 @@ body {
         @extend %center;
         margin-top: 1rem;
         border: 0.5rem solid $div;
+        &:hover {
+            background-color: $background-mouseover;
+            border-radius: 3rem 3rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        .game-img {
+            object-fit: contain;
+            width: 20rem;
+            height: 20rem;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            border-radius: 1rem;
+        }
+        .game-text {
+            margin: 0.5rem auto;
+            text-align: center;
+            font-size: 1.2rem;
+            color: $font;
+        }
     }
 }

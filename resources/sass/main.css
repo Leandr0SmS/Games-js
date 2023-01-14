@@ -35,4 +35,27 @@ body {
   width: fit-content;
   margin-top: 1rem;
   border: 0.5rem solid #1b1b32;
+}
+.games .game-div:hover {
+  background-color: #5f5f6e;
+  border-radius: 3rem 3rem;
+}
+.games .game-div a {
+  text-decoration: none;
+}
+.games .game-div .game-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 20rem;
+  height: 20rem;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  border-radius: 1rem;
+}
+.games .game-div .game-text {
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f5f6f7;
 }/*# sourceMappingURL=main.css.map */
