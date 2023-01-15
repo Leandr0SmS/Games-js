@@ -1,9 +1,11 @@
 $(document).ready(() => {
 
     let count = 0;
-    $('#counter').text(`${count}`);
-
+    let level = 1;
     let round = 3;
+
+    $('#counter').text(`${count}`);
+    $('#level').text(`${level}`);
     $('#round').text(`${round}`);
 
     $('.ball').on('click', (event) => {
@@ -27,7 +29,7 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-1')
                 .css('visibility', 'visible')
-                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('left', `${Math.floor(Math.random() * 90)}%`)
                 .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
@@ -43,7 +45,7 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-2')
                 .css('visibility', 'visible')
-                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('left', `${Math.floor(Math.random() * 90)}%`)
                 .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
@@ -59,7 +61,7 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-3')
                 .css('visibility', 'visible')
-                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('left', `${Math.floor(Math.random() * 90)}%`)
                 .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {
@@ -75,7 +77,7 @@ $(document).ready(() => {
         setTimeout(() => {
             $('#ball-4')
                 .css('visibility', 'visible')
-                .css('left', `${Math.floor(Math.random() * 66)}rem`)
+                .css('left', `${Math.floor(Math.random() * 90)}%`)
                 .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
                 .addClass('animate__animated animate__backInUp');
             setTimeout(() => {

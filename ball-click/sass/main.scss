@@ -65,7 +65,17 @@ main {
             position: absolute;
             visibility: hidden;
         }
+        .scoreboard {
+            height: 50vh;
+            width: 50vh;
+            position: relative;
+            background-color: $div;
+            border: 1px solid $font;
+            margin: 2rem auto;
+            visibility: hidden;
+        }
     }
+
 }
 
 .animate__hinge {
