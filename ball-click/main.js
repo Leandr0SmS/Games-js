@@ -9,12 +9,10 @@ $(document).ready(() => {
     $('#counter').text(`${count}`);
     $('#level').text(`${level}`);
     $('#round').text(`${round}`);
-    
 
     //start btn
     $('#start-btn').on('click', () => { 
-        round --;
-        $('#round').text(`${round}`);
+        $('#round').text(`${round --}`);
 
         for (let i = 1; i < 6; i ++) {
             setTimeout(() => {
@@ -30,6 +28,9 @@ $(document).ready(() => {
                 );
                 
                 $(`#ball-${i}`).on('click', (event) => {
+                    $(this).data('clicked', true);
+                    count ++
+                    $('#counter').text(`${count}`);
                     $(event.currentTarget).css('backgroundColor', 'green').addClass('animate__animated animate__hinge');
                     setTimeout(() => {
                         $(event.currentTarget).remove();
