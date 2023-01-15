@@ -4,10 +4,12 @@ $(document).ready(() => {
     let level = 1;
     let round = 3;
 
+    //Statistics
     $('#counter').text(`${count}`);
     $('#level').text(`${level}`);
     $('#round').text(`${round}`);
 
+    //hit the ball logic
     $('.ball').on('click', (event) => {
         $(event.currentTarget).css('backgroundColor', 'green').addClass('animate__animated animate__hinge');
         setTimeout(() => {
@@ -22,6 +24,7 @@ $(document).ready(() => {
         $('#counter').text(`${count}`);
     })
 
+    //start btn
     $('#start-btn').on('click', () => { 
         round --;
         $('#round').text(`${round}`);
