@@ -19,13 +19,13 @@ $(document).ready(() => {
             setTimeout(() => {
                 $('.play-zone')
                     .append($("<div></div>")
-                        .addClass("ball")
-                        .attr('id', `ball-${i}`)
-                        .append(`${i}`)
-                        .css('visibility', 'visible')
-                        .css('left', `${Math.floor(Math.random() * 90)}%`)
-                        .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
-                        .addClass('animate__animated animate__backInUp')
+                    .addClass("ball")
+                    .attr('id', `ball-${i}`)
+                    .append(`${i}`)
+                    .css('visibility', 'visible')
+                    .css('left', `${Math.floor(Math.random() * 90)}%`)
+                    .css('bottom', `${Math.floor(Math.random() * 24)}rem`)
+                    .addClass('animate__animated animate__backInUp')
                 );
                 
                 $(`#ball-${i}`).on('click', (event) => {
