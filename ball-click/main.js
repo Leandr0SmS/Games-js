@@ -12,7 +12,8 @@ $(document).ready(() => {
 
     //start btn
     $('#start-btn').on('click', () => { 
-        $('#round').text(`${round --}`);
+        round --;
+        $('#round').text(`${round}`);
 
         for (let i = 1; i < 6; i ++) {
             setTimeout(() => {
