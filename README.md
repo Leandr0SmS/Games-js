@@ -3,7 +3,7 @@
 
 ## Description
 
-    Some simple game projects. This repo is intended to improve JS skills.
+    Some simple game projects. This repo is intended to improve JS skills. It's under development, still has bugs
 
 ## Acknowledgments
 
