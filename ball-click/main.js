@@ -25,10 +25,11 @@ $(document).ready(() => {
     */
 
     //infoBoard with instructio and welcome
-    $('.infoBoard')
-        .css('visibility', 'visible')
+   /* $('.infoBoard')
+        .css('visibility', 'visible');
     $('.infoBoard-div')
-        .append(welcomeText)
+        .append(welcomeText);*/
+    
         
 
 
