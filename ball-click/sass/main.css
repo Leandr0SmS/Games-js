@@ -109,7 +109,7 @@ main .play-zone .ball {
     font-size: 1.5rem;
   }
 }
-main .play-zone .scoreboard {
+main .play-zone .infoBoard {
   height: 50vh;
   width: 50vh;
   position: relative;
