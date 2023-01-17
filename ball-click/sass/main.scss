@@ -11,12 +11,21 @@ body {
     background-color: $div;
     padding: 0.5rem;
     border-bottom: 1px solid $font;
+    @media only screen and (max-width: 450px) {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
     .nav-link {
         font-size: 2rem;
         color: $font;
         padding: 2rem;
         &:hover {
             color: $font-hover;
+        }
+        @media only screen and (max-width: 450px) {
+            padding: 0.5rem;
+            font-size: 1.5rem;
         }
     }
 }
@@ -26,6 +35,8 @@ main {
     #btn-div {
         width: 9rem;
         margin: 2rem auto;
+        display: flex;
+        justify-content: center;
         #start-btn {
             background-color: red;
             color: $font;
@@ -36,6 +47,12 @@ main {
             font-size: 2rem;
             cursor: pointer;
             margin: 0.3rem;
+            @media only screen and (max-width: 450px) {
+                width: 4rem;
+                height: 4rem;
+                font-size: 1rem;
+                border: 0.1rem solid $font;
+            }
         }
     }
     #statistics-div {
@@ -44,9 +61,15 @@ main {
         display: flex;
         justify-content: space-around;
         padding: 0.5rem;
+        @media only screen and (max-width: 450px) {
+            font-size: 1rem;
+        }
         .statistics-box {
             display: flex;
             gap: 1rem;
+            @media only screen and (max-width: 450px) {
+                gap: 0.5rem;
+            }
         }
     }
     .play-zone {
@@ -64,6 +87,11 @@ main {
             font-size: 3rem;
             position: absolute;
             visibility: hidden;
+            @media only screen and (max-width: 450px) {
+                height: 3rem;
+                width: 3rem;
+                font-size: 1.5rem;
+            }
         }
         .scoreboard {
             height: 50vh;
