@@ -1,3 +1,5 @@
+const welcomeText = 'Hello, This is the Ball Click game, you need to be fast! When you are ready, click at the OK button.';
+
 $(document).ready(() => {
 
     let count = 0;
@@ -9,6 +11,26 @@ $(document).ready(() => {
     $('#counter').text(`${count}`);
     $('#level').text(`${level}`);
     $('#round').text(`${round}`);
+
+    /*
+        - open infoBoard with insructions
+        - press button of infoBoard to start     
+
+        if (round > 0 && level < 3) {
+            -enable button
+            -click-start(
+                if ()
+            )
+    }
+    */
+
+    //infoBoard with instructio and welcome
+    $('.infoBoard')
+        .css('visibility', 'visible')
+    $('.infoBoard-div')
+        .append(welcomeText)
+        
+
 
     //start btn
     $('#start-btn').on('click', () => { 
@@ -42,7 +64,6 @@ $(document).ready(() => {
                     $(`#ball-${i}`).remove();
                 }, levelTime)
             }, (i * 1000));
-        }
-        
+        } 
     })
 })
