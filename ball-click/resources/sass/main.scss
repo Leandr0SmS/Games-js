@@ -1,4 +1,4 @@
-@import "../../resources/sass/base";
+@import "../../../resources/sass/base";
 
 body {
     background-color: $black;
@@ -101,10 +101,17 @@ main {
             border: 1px solid $font;
             margin: 2rem auto;
             visibility: hidden;
+            @media only screen and (max-width: 450px) {
+                height: 25vh;
+                width: 25vh;
+            }
             .infoBoard-div {
                 margin: 1rem;
                 color: $font;
                 font-size: 2rem;
+                @media only screen and (max-width: 450px) {
+                    font-size: 1rem;
+                }
             }
             #div-ok-btn {
                 display: flex;

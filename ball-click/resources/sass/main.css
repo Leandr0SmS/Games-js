@@ -118,10 +118,21 @@ main .play-zone .infoBoard {
   margin: 2rem auto;
   visibility: hidden;
 }
+@media only screen and (max-width: 450px) {
+  main .play-zone .infoBoard {
+    height: 25vh;
+    width: 25vh;
+  }
+}
 main .play-zone .infoBoard .infoBoard-div {
   margin: 1rem;
   color: #f5f6f7;
   font-size: 2rem;
+}
+@media only screen and (max-width: 450px) {
+  main .play-zone .infoBoard .infoBoard-div {
+    font-size: 1rem;
+  }
 }
 main .play-zone .infoBoard #div-ok-btn {
   display: flex;
