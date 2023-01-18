@@ -13,11 +13,11 @@ export const functions = {
         $('.infoBoard').css('visibility', 'visible');
         $('.infoBoard-div').append(info);
         $('#ok-btn').on('click', () => {
-            okBtn();
+            this.okBtn();
         });
     },
     
-    callTheBall () {
+    callTheBall (levelTime, count) {
         for (let i = 1; i < 6; i ++) {
             setTimeout(() => {
                 $('.play-zone')
