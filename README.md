@@ -3,7 +3,8 @@
 
 ## Description
 
-    Some simple game projects. This repo is intended to improve JS skills. It's under development, still has bugs
+    Some simple game projects. This repo is intended to improve JS skills. It's under development... still has bugs...
+    Need to improve the logic to count points and change level.
 
 ## Acknowledgments
 
