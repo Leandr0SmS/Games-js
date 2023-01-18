@@ -1,16 +1,35 @@
+//variables
+
+let count = 0;
+let level = 1;
+let levelTime = 2000;
+let round = 3;
+
 const welcomeText = 'Hello, This is the Ball Click game, you need to be fast! When you are ready, click at the OK button.';
 
-$(document).ready(() => {
+const stopToInfo = function (info) {
+    $('#start-btn')
+        .prop("disabled", true)
+        .css('cursor', 'not-allowed')
+    $('.infoBoard').css('visibility', 'visible');
+    $('.infoBoard-div').append(info);
+}
 
-    let count = 0;
-    let level = 1;
-    let levelTime = 2000;
-    let round = 3;
+const okBtn = function  () {
+    $('.infoBoard').css('visibility', 'hidden');
+    $('#start-btn')
+        .prop("disabled", false)
+        .css('cursor', 'pointer');
+}
+
+$(document).ready(() => {
 
     //Statistics
     $('#counter').text(`${count}`);
     $('#level').text(`${level}`);
     $('#round').text(`${round}`);
+
+    stopToInfo(welcomeText);
 
     /*
         - function to open infoBoard with insructions
@@ -25,11 +44,6 @@ $(document).ready(() => {
 
         }
     */
-
-
-        const StopToInfo = function () {
-            
-        }
 
 
     //infoBoard with instructio and welcome

@@ -132,6 +132,7 @@ main .play-zone .infoBoard #div-ok-btn #ok-btn {
   padding: 0.5rem 2rem;
   background-color: #f5f6f7;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .animate__hinge {
