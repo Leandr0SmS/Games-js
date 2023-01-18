@@ -12,27 +12,6 @@ $(document).ready(() => {
     $('#level').text(`${level}`);
     $('#round').text(`${round}`);
 
-    /*
-        - open infoBoard with insructions
-        - press button of infoBoard to start     
-
-        if (round > 0 && level < 3) {
-            -enable button
-            -click-start(
-                if ()
-            )
-    }
-    */
-
-    //infoBoard with instructio and welcome
-   /* $('.infoBoard')
-        .css('visibility', 'visible');
-    $('.infoBoard-div')
-        .append(welcomeText);*/
-    
-        
-
-
     //start btn
     $('#start-btn').on('click', () => { 
         round --;
