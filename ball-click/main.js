@@ -27,8 +27,8 @@ $(document).ready(() => {
             $('#round').text(`${round}`);
             functions.callTheBall(levelTime, count);
         }
-        if (round === 4 && level === 4) {
-            this.stopToInfo(endInfo);
+        if (round === 4 && level === 3) {
+            functions.stopToInfo(endInfo);
         }
         if (round === 4 && level < 3) {
             level ++;
