@@ -1,44 +1,33 @@
 import { functions } from "./resources/scripts/functions.js";
 
-let round = 0;
 let count = 0;
-let level = 1;
-let levelTime = 2000;
+let level = 0;
 
 const welcomeText = 'Hello, This is the Ball Click game, you need to be fast! Click at the OK button and When you are ready click Start!';
-let score = `Level: ${level} Points: ${count}`;
-let endInfo = `Game Over!! ${(count * 100) / 45}`
+let endInfo = `Game Over!!`
 
 $(document).ready(() => {
 
     //Statistics
     $('#counter').text(`${count}`);
     $('#level').text(`${level}`);
-    $('#round').text(`${round}`);
 
     functions.stopToInfo(welcomeText);
 
-    //start btn
-    $('#start-btn').on('click', () => { 
-        
-        round++
-
-        if (round < 4) {
-            $('#round').text(`${round}`);
-            functions.callTheBall(levelTime, count);
-        }
-        if (round === 4 && level === 3) {
-            functions.stopToInfo(endInfo);
-        }
-        if (round === 4 && level < 3) {
+    if (level < 4) {
+        $('#start-btn').on('click', () => {
+            count = 0;
+            $('#counter').text(`${count}`);
             level ++;
-            $('#level').text(`${level}`);
-            round = 0;
-            $('#round').text(`${round}`);
-            functions.stopToInfo(score);
-            
-        }
-    });
+            if (level === 4) {
+                functions.stopToInfo(endInfo);
+            } else {
+                functions.callTheBall(count, level);
+                $('#level').text(`${level}`);
+            }
+        });
+    } 
+    //start btn
 });
 
     /*

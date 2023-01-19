@@ -1,18 +1,26 @@
 
 export const functions = {
 
+    starBtnToggle (boolen) {
+        if (boolen) {
+            $('#start-btn')
+                .prop("disabled", false)
+                .css('cursor', 'pointer')
+        } else {
+            $('#start-btn')
+            .prop("disabled", true)
+            .css('cursor', 'not-allowed');
+        } 
+    },
+
     okBtn () {
-        $('#start-btn')
-            .prop("disabled", false)
-            .css('cursor', 'pointer');
+        this.starBtnToggle(true);
         $('.infoBoard-div').empty();
         $('.infoBoard').css('visibility', 'hidden');
     },
     
     stopToInfo (addInfo) {
-        $('#start-btn')
-            .prop("disabled", true)
-            .css('cursor', 'not-allowed')
+        this.starBtnToggle(false);
         $('.infoBoard').css('visibility', 'visible');
         $('.infoBoard-div').append(addInfo);
         $('#ok-btn').on('click', () => {
@@ -37,8 +45,9 @@ export const functions = {
         }
     },*/
     
-    callTheBall (levelTime, count) {
+    callTheBall (count, level) {
         for (let i = 1; i < 6; i ++) {
+            let numOfBalls = 0;
             setTimeout(() => {
                 $('.play-zone')
                     .append($("<div></div>")
@@ -63,9 +72,8 @@ export const functions = {
     
                 setTimeout(() => {
                     $(`#ball-${i}`).remove();
-                }, levelTime)
+                }, (4 - level) * 1000)
             }, (i * 1000));
         }
-        return count;
     }
 }
