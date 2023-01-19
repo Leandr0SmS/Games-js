@@ -2,15 +2,13 @@
 export const functions = {
 
     starBtnToggle (boolen) {
-        if (boolen) {
-            $('#start-btn')
+        boolen 
+            ?$('#start-btn')
                 .prop("disabled", false)
                 .css('cursor', 'pointer')
-        } else {
-            $('#start-btn')
+            :$('#start-btn')
             .prop("disabled", true)
             .css('cursor', 'not-allowed');
-        } 
     },
 
     okBtn () {
@@ -27,23 +25,6 @@ export const functions = {
             this.okBtn();
         });
     },
-
-    /*counter(count, round, level) {
-        round++
-        if (round === 4 && level === 4) {
-            this.stopToInfo (endInfo);
-        }
-        if (round === 4 && level < 3) {
-            level ++;
-            $('#level').text(`${level}`);
-            round = 0;
-            $('#round').text(`${round}`);
-            this.stopToInfo (score);
-        }
-        if (round < 4) {
-            $('#round').text(`${round}`);
-        }
-    },*/
     
     callTheBall (count, level) {
         for (let i = 1; i < 6; i ++) {
