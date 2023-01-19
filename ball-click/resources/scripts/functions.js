@@ -28,7 +28,6 @@ export const functions = {
     
     callTheBall (count, level) {
         for (let i = 1; i < 6; i ++) {
-            let numOfBalls = 0;
             setTimeout(() => {
                 $('.play-zone')
                     .append($("<div></div>")
@@ -54,6 +53,7 @@ export const functions = {
                 setTimeout(() => {
                     $(`#ball-${i}`).remove();
                 }, (4 - level) * 1000)
+            
             }, (i * 1000));
         }
     }

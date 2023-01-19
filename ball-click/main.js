@@ -18,7 +18,7 @@ $(document).ready(() => {
             level ++;
             if (level === 4) {
                 functions.stopToInfo(endInfo);
-                level = 0
+                level = 0;
                 $('#level').text(`${level}`);
                 count = 0;
                 $('#counter').text(`${count}`);
