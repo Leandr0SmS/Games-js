@@ -73,7 +73,7 @@ main #statistics-div {
 }
 @media only screen and (max-width: 450px) {
   main #statistics-div {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 main #statistics-div .statistics-box {
