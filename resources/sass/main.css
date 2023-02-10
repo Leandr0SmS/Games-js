@@ -30,7 +30,6 @@ body {
   border: 1px solid #f5f6f7;
 }
 .games .game-div {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 1rem;
