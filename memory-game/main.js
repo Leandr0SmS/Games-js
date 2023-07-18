@@ -3,16 +3,28 @@ const { useState, useEffect } = React;
 const { createRoot } = ReactDOM;
 
 const Card = ({ src, id }) => {
+
+    const [toggle, setToggle] = useState(0);
+
+    const handleToggle = () => setToggle(t => !t);
+
     return (
-        <div className="card">
-            <img
+        <div 
+            className="card"
+            onClick={handleToggle}
+        >
+            {
+                toggle ?   
+                <img
                 className="card--img"
                 id={id}
                 src={`./images/img_${src}.jpg`}
                 alt={`images of a dog - code: ${src}`}
                 aria-hidden="false"
                 role="img"
-            />
+                />
+                : undefined
+            }
         </div>
     )
 };

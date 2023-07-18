@@ -11,16 +11,29 @@ body {
   min-height: 100vh;
 }
 
-.game--grid {
+#game--grid {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-gap: 1rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-image: url(../images/back.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
   align-items: center;
-  justify-items: center;
 }
 
 .card--img {
-  width: 2rem;
-  height: 3rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
