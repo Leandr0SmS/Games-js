@@ -1,13 +1,14 @@
-const imgs_selector = (num) => {
+export const imgSelectorArray = (num) => {
+    const numRound = Math.floor(num);
     const randomNumbers = [];
-    for (let i = 0; randomNumbers.length <= num - 1; i++) {
-        console.log(randomNumbers.length)
-        const randomNum = Math.floor(Math.random() * num) + 1;
-        randomNumbers.includes(randomNum) 
-            ? randomNumbers 
-            : randomNumbers.push(randomNum);
+    while (randomNumbers.length < numRound * 2) {
+        const randomNum = Math.floor(Math.random() * numRound) + 1;
+        const filtered = randomNumbers.filter(e => e[0] == randomNum);
+        if (filtered.length == 0) {
+            randomNumbers.push([randomNum, 'a'])
+        } else if (filtered.length == 1) {
+            randomNumbers.push([randomNum, 'b'])
+        }
     }
     return randomNumbers;
 };
-
-console.log(imgs_selector(10));
