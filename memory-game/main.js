@@ -26,11 +26,14 @@ const App = () => {
 
     const [numOfCards, setNumOfCards] = useState(0);
     const [cardsSet, setCardsSet] = useState([]);
-    const [points, setPoints] = useState(0);
+    const [moves, setMoves] = useState(0);
 
     const handleChange = (e) => setNumOfCards(e.target.value);
 
-    const handlePlay = (e) => setCardsSet(imgSelectorArray(numOfCards));
+    const handlePlay = (e) => {
+        setCardsSet(imgSelectorArray(numOfCards));
+        setMoves(0);
+    };
 
     const handleCardCLick = (e) => {
         console.log(e.target.id)
@@ -41,14 +44,14 @@ const App = () => {
         } else if (toggleNum.length == 1) {
             const toggled = update_card_set(cardsSet, cardId).filter(c =>  c.toggle == true);
             if (toggled[0].id[0] == toggled[1].id[0]) {
-                console.log("point!!")
-                setPoints(p => p + 1);
                 setCardsSet(remove_equals_cards(update_card_set(cardsSet, cardId)));
+                setMoves(m => m + 1);
             } else {
                 setCardsSet(update_card_set(cardsSet, cardId));
             }
         } else if (toggleNum.length == 2) {
                 setCardsSet(update_card_set(reset_card_set(cardsSet), cardId));
+                setMoves(m => m + 1);
         }
     };
 
@@ -89,6 +92,7 @@ const App = () => {
                 >Play</button>
             </form>
             <div id="cards-selected"></div>
+            <div id="points--div">Tentativas: {moves}</div>
             <div id="game--grid">
                 {gameCards}
             </div>
