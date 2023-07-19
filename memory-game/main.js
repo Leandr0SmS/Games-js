@@ -1,6 +1,6 @@
 import { imgSelectorArray } from "./functions/random_img_selector.js";
-import { update_card_set } from "./functions/update_card_set.js";
-const { useState, useEffect } = React;
+import { update_card_set, reset_card_set } from "./functions/update_card_set.js";
+const { useState } = React;
 const { createRoot } = ReactDOM;
 
 const Card = ({ src, id, onCardCLick, toggle}) => {
@@ -26,6 +26,7 @@ const App = () => {
 
     const [numOfCards, setNumOfCards] = useState(0);
     const [cardsSet, setCardsSet] = useState([]);
+    const [points, setPoints] = useState(0);
 
     const handleChange = (e) => setNumOfCards(e.target.value);
 
@@ -34,9 +35,20 @@ const App = () => {
     const handleCardCLick = (e) => {
         console.log(e.target.id)
         const cardId = e.target.id;
-        const toggleNum = cardsSet.filter(c => c.toglle == true);
-        if (toggleNum.length == 0) {
+        const toggleNum = cardsSet.filter(c => c.toggle == true);
+        if (toggleNum.length < 1) {
             setCardsSet(update_card_set(cardsSet, cardId));
+        } else if (toggleNum.length == 1) {
+            const toggled = update_card_set(cardsSet, cardId).filter(c =>  c.toggle == true);
+            if (toggled[0].id[0] == toggled[1].id[0]) {
+                console.log("point!!")
+                setPoints(p => p + 1);
+                setCardsSet(update_card_set(cardsSet, cardId));
+            } else {
+                setCardsSet(update_card_set(cardsSet, cardId));
+            }
+        } else if (toggleNum.length == 2) {
+                setCardsSet(update_card_set(reset_card_set(cardsSet), cardId));
         }
     };
 
@@ -53,6 +65,7 @@ const App = () => {
     })
 
     console.log(cardsSet)
+    console.log(cardsSet.filter(c => c.toglle == true))
 
     return (
         <React.Fragment>

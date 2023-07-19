@@ -1,5 +1,5 @@
-export const update_card_set = (array, id) => {
-    return array.map(c=> {
+const update_card_set = (array, id) => {
+    return array.map(c => {
         if (c.id == id) {
             return {
                 ...c,
@@ -12,6 +12,10 @@ export const update_card_set = (array, id) => {
         }
     })
 };
+
+const reset_card_set = (array) => array.map(c => ({ ...c, toggle: false}));
+
+export { update_card_set, reset_card_set }
 
 //const arr1 = [
 //    {
@@ -28,7 +32,7 @@ export const update_card_set = (array, id) => {
 //    },
 //    {
 //        "id": "1a",
-//        "toggle": false
+//        "toggle": true
 //    },
 //    {
 //        "id": "2b",
