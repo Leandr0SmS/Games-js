@@ -1,4 +1,5 @@
 import { imgSelectorArray } from "./functions/random_img_selector.js";
+import { update_card_set } from "./functions/update_card_set.js";
 const { useState, useEffect } = React;
 const { createRoot } = ReactDOM;
 
@@ -8,19 +9,15 @@ const Card = ({ src, id, onCardCLick, toggle}) => {
         <div 
             className="card"
             onClick={onCardCLick}
+        > 
+            <img
+            className="card--img"
+            src={toggle ? `./images/img_${src}.jpg` : `./images/back.jpeg`}
             id={id}
-        >
-            {
-                toggle ?   
-                <img
-                className="card--img"
-                src={`./images/img_${src}.jpg`}
-                alt={`images of a dog - code: ${src}`}
-                aria-hidden="false"
-                role="img"
-                />
-                : undefined
-            }
+            alt={`images of a dog - code: ${src}`}
+            aria-hidden="false"
+            role="img"
+            />
         </div>
     )
 };
@@ -35,16 +32,22 @@ const App = () => {
     const handlePlay = (e) => setCardsSet(imgSelectorArray(numOfCards));
 
     const handleCardCLick = (e) => {
-        console.log(e.target)
+        console.log(e.target.id)
+        const cardId = e.target.id;
+        const toggleNum = cardsSet.filter(c => c.toglle == true);
+        if (toggleNum.length == 0) {
+            setCardsSet(update_card_set(cardsSet, cardId));
+        }
     };
 
     const gameCards = cardsSet.map(card => {
         return (
             <Card
-                key={`cards_${card.cardNum + card.cardLetter}`} 
-                src={card.cardNum}
-                id={card.cardNum + card.cardLetter}
+                key={`cards_${card.id}`} 
+                src={card.id[0]}
+                id={card.id}
                 onCardCLick={handleCardCLick}
+                toggle={card.toggle}
             />
         )
     })
