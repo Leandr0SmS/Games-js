@@ -2,22 +2,18 @@ import { imgSelectorArray } from "./functions/random_img_selector.js";
 const { useState, useEffect } = React;
 const { createRoot } = ReactDOM;
 
-const Card = ({ src, id }) => {
-
-    const [toggle, setToggle] = useState(0);
-
-    const handleToggle = () => setToggle(t => !t);
+const Card = ({ src, id, onCardCLick, toggle}) => {
 
     return (
         <div 
             className="card"
-            onClick={handleToggle}
+            onClick={onCardCLick}
+            id={id}
         >
             {
                 toggle ?   
                 <img
                 className="card--img"
-                id={id}
                 src={`./images/img_${src}.jpg`}
                 alt={`images of a dog - code: ${src}`}
                 aria-hidden="false"
@@ -38,17 +34,22 @@ const App = () => {
 
     const handlePlay = (e) => setCardsSet(imgSelectorArray(numOfCards));
 
+    const handleCardCLick = (e) => {
+        console.log(e.target)
+    };
+
     const gameCards = cardsSet.map(card => {
         return (
             <Card
-                key={`cards_${card.join('_')}`} 
-                src={card[0]}
-                id={card.join('_')}
+                key={`cards_${card.cardNum + card.cardLetter}`} 
+                src={card.cardNum}
+                id={card.cardNum + card.cardLetter}
+                onCardCLick={handleCardCLick}
             />
         )
     })
 
-    console.log(gameCards)
+    console.log(cardsSet)
 
     return (
         <React.Fragment>
