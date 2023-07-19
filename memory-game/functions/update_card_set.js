@@ -15,7 +15,9 @@ const update_card_set = (array, id) => {
 
 const reset_card_set = (array) => array.map(c => ({ ...c, toggle: false}));
 
-export { update_card_set, reset_card_set }
+const remove_equals_cards = (array) => array.filter(c => c.toggle == false);
+
+export { update_card_set, reset_card_set, remove_equals_cards }
 
 //const arr1 = [
 //    {

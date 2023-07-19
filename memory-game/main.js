@@ -1,5 +1,5 @@
 import { imgSelectorArray } from "./functions/random_img_selector.js";
-import { update_card_set, reset_card_set } from "./functions/update_card_set.js";
+import { update_card_set, reset_card_set, remove_equals_cards } from "./functions/update_card_set.js";
 const { useState } = React;
 const { createRoot } = ReactDOM;
 
@@ -43,7 +43,7 @@ const App = () => {
             if (toggled[0].id[0] == toggled[1].id[0]) {
                 console.log("point!!")
                 setPoints(p => p + 1);
-                setCardsSet(update_card_set(cardsSet, cardId));
+                setCardsSet(remove_equals_cards(update_card_set(cardsSet, cardId)));
             } else {
                 setCardsSet(update_card_set(cardsSet, cardId));
             }
