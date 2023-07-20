@@ -82,7 +82,7 @@ const App = () => {
                     type="number"
                     id="input"
                     value={numOfCards}
-                    max="10"
+                    max="20"
                     min="0"
                     onChange={handleChange}
                 />
