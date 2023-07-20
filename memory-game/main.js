@@ -86,13 +86,13 @@ const App = () => {
                     min="0"
                     onChange={handleChange}
                 />
+                <div id="points--div">Tentativas: {moves}</div>
                 <button 
                     type="button"
                     id="btn"
                     onClick={handlePlay}
                 >Play</button>
             </form>
-            <div id="points--div">Tentativas: {moves}</div>
         </div>
             <div id="game--grid">
                 {gameCards}
