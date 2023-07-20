@@ -1,3 +1,9 @@
+$bittersweet: #ff595eff;
+$sunglow: #ffca3aff;
+$yellow-green: #8ac926ff;
+$steel-blue: #1982c4ff;
+$ultra-violet: #6a4c93ff;
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -6,7 +12,19 @@
 }
 body {
     height: 100%;
-    min-height: 100vh;
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#div--info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: $steel-blue;
 }
 #game--grid {
     height: 80vh;

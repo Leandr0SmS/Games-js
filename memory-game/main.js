@@ -24,7 +24,7 @@ const Card = ({ src, id, onCardCLick, toggle}) => {
 
 const App = () => {
 
-    const [numOfCards, setNumOfCards] = useState(0);
+    const [numOfCards, setNumOfCards] = useState(6);
     const [cardsSet, setCardsSet] = useState([]);
     const [moves, setMoves] = useState(0);
 
@@ -72,16 +72,17 @@ const App = () => {
 
     return (
         <React.Fragment>
-            <h1>Memory Game</h1>
+        <div id="div--info">
             <form 
                 id="form"
                 onSubmit={e => e.preventDefault()}
             >
-                <label htmlFor="input">Selecione o numero de cartas:</label>
+                <label htmlFor="input">Selecione o numero de pares:</label>
                 <input 
                     type="number"
                     id="input"
-                    max="20"
+                    value={numOfCards}
+                    max="10"
                     min="0"
                     onChange={handleChange}
                 />
@@ -91,8 +92,8 @@ const App = () => {
                     onClick={handlePlay}
                 >Play</button>
             </form>
-            <div id="cards-selected"></div>
             <div id="points--div">Tentativas: {moves}</div>
+        </div>
             <div id="game--grid">
                 {gameCards}
             </div>
