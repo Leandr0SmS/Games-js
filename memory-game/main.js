@@ -65,35 +65,32 @@ const App = () => {
                 toggle={card.toggle}
             />
         )
-    })
-
-    console.log(cardsSet)
-    console.log(cardsSet.filter(c => c.toglle == true))
+    });
 
     return (
         <React.Fragment>
-        <div id="div--info">
-            <form 
-                id="form"
-                onSubmit={e => e.preventDefault()}
-            >
-                <label htmlFor="input">Selecione o numero de pares:</label>
-                <input 
-                    type="number"
-                    id="input"
-                    value={numOfCards}
-                    max="10"
-                    min="0"
-                    onChange={handleChange}
-                />
-                <div id="points--div">Tentativas: {moves}</div>
-                <button 
-                    type="button"
-                    id="btn"
-                    onClick={handlePlay}
-                >Play</button>
-            </form>
-        </div>
+            <div id="div--info">
+                <form 
+                    id="form"
+                    onSubmit={e => e.preventDefault()}
+                >
+                    <label htmlFor="input">Selecione o numero de pares:</label>
+                    <input 
+                        type="number"
+                        id="input"
+                        value={numOfCards}
+                        max="10"
+                        min="0"
+                        onChange={handleChange}
+                    />
+                    <div id="points--div">Tentativas: {moves}</div>
+                    <button 
+                        type="button"
+                        id="btn"
+                        onClick={handlePlay}
+                    >Play</button>
+                </form>
+            </div>
             <div id="game--grid">
                 {gameCards}
             </div>
