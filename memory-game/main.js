@@ -1,5 +1,5 @@
 import { imgSelectorArray } from "./functions/random_img_selector.js";
-import { update_card_set, reset_card_set, remove_equals_cards } from "./functions/update_card_set.js";
+import { update_card_set, reset_card_set, remove_equals_cards } from "./functions/change_card_set.js";
 const { useState } = React;
 const { createRoot } = ReactDOM;
 
@@ -82,7 +82,7 @@ const App = () => {
                     type="number"
                     id="input"
                     value={numOfCards}
-                    max="20"
+                    max="10"
                     min="0"
                     onChange={handleChange}
                 />
