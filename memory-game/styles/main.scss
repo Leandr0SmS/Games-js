@@ -86,3 +86,8 @@ body {
   object-fit:cover;
   border-radius: 0.7rem;
 }
+
+.flip {
+    transform: rotateY(180deg);
+    transition: transform 0.2s;
+}

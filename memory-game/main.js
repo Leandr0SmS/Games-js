@@ -11,7 +11,7 @@ const Card = ({ src, id, onCardCLick, toggle}) => {
             onClick={onCardCLick}
         > 
             <img
-            className="card--img"
+            className={toggle ? "card--img flip" : "card--img"}
             src={toggle ? `./images/img_${src}.jpg` : `./images/back.jpeg`}
             id={id}
             alt={`images of a dog - code: ${src}`}
