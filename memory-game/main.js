@@ -12,7 +12,7 @@ const Card = ({ src, id, onCardCLick, toggle}) => {
         > 
             <img
             className={toggle ? "card--img flip" : "card--img"}
-            src={toggle ? `./images/img_${src}.jpg` : `./images/back.jpeg`}
+            src={toggle ? `./images/img_${src}.jpg` : `./images/memo.png`}
             id={id}
             alt={`images of a dog - code: ${src}`}
             aria-hidden="false"
